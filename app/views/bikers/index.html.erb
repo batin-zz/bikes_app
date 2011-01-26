@@ -1,0 +1,25 @@
+<h1>Listing bikers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bike</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bikers.each do |biker| %>
+  <tr>
+    <td><%= biker.name %></td>
+    <td><%= biker.bike_id %></td>
+    <td><%= link_to 'Show', biker %></td>
+    <td><%= link_to 'Edit', edit_biker_path(biker) %></td>
+    <td><%= link_to 'Destroy', biker, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Biker', new_biker_path %>

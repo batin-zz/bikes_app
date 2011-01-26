@@ -1,4 +1,8 @@
 BikesApp::Application.routes.draw do
+  resources :bikers
+
+  resources :bikes
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
